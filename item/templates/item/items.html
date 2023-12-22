@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Items</title>
+</head>
+<body>
+Товары:
+{% for item in items %}
+    <div>
+        <button onclick="open_item({{ item.id }})">{{ item.name }}</button>
+    </div>
+{% endfor %}
+<script>
+    function open_item(itemId) {
+        window.location = "/item/" + itemId
+    }
+</script>
+</body>
+</html>

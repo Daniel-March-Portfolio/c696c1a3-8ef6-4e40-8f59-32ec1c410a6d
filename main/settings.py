@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "item",
 ]
 
 MIDDLEWARE = [
@@ -119,3 +120,6 @@ STATIC_ROOT = BASE_DIR / "static/"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+STRIPE_API_KEY = os.getenv("STRIPE_API_KEY")
+STRIPE_BACK_URL = os.getenv("STRIPE_BACK_URL")
